@@ -15,9 +15,9 @@ var (
 	user32 = syscall.MustLoadDLL("user32.dll")
 )
 const (
-    coinbaseCryptoAPI = "https://api.coinbase.com/v2/prices/%s-%s/spot"
-	currency          = "USD"
-	retryDelay        = 30 // Delay between checking a tokens price
+    coinbaseCryptoAPI   = "https://api.coinbase.com/v2/prices/%s-%s/spot"
+	currency            = "USD"
+	retryDelay          = 30 // Delay between checking a tokens price
 	MB_OK               = 0x00000000
 	MB_ICONINFORMATION  = 0x00000040
 	MB_SYSTEMMODAL      = 0x00001000
