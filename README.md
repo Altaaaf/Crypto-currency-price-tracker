@@ -16,7 +16,7 @@ go run main.go
 ## Usage
 
 You first need to create a configuration file named config.json. The configuration file should contain a list of tokens that you want to track, along with their symbols, threshold values. Here's an example configuration file:
-``` {.json}
+```
 {
     "tokens": [
         {
