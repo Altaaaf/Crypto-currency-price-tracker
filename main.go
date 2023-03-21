@@ -63,7 +63,7 @@ func main() {
                 if price > token.Threshold {
                     msg := fmt.Sprintf("%s price ($%.2f) is above threshold ($%.2f)!", token.Name, price, token.Threshold)
 					fmt.Printf("%s\n", msg)
-					MessageBox("Token has passed threshold", msg, MB_ICONINFORMATION|MB_OK|MB_SYSTEMMODAL)
+					messageBox("Token has passed threshold", msg, MB_ICONINFORMATION|MB_OK|MB_SYSTEMMODAL)
                 }
 
                 time.Sleep(retryDelay * time.Second)
@@ -74,7 +74,7 @@ func main() {
     wg.Wait()
 }
 
-func MessageBox(caption, message string, style uintptr) int {
+func messageBox(caption, message string, style uintptr) int {
 	ret, _, _ := syscall.Syscall6(
 		user32.MustFindProc("MessageBoxW").Addr(),
 		4,
